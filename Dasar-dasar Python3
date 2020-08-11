@@ -1,0 +1,23 @@
+# VARIABLE
+# Variable digunakan untuk menimpan suatu data. Dengan menyimpan data pada variable, maka data tersebut dapat digunakan kapanpun dibutuhkan
+dengan cara memanggilnya.
+
+# Syarat membuat variable ada 3:
+1. Pembuatan variable dapat dimulai dengan huruf kapital (A-Z) atau huruf kecil (a-z).
+2. Pembuatan variable dapat dimulai dengan garis bawah / underscore (_) yang dikombinasikan dengan angka dan huruf.
+3. Penamaan variable tidak boleh dimulai dengan angka.
+4. Penamaan variable tidak boleh menggunakan spasi.
+
+# Contoh
+DataKu        : valid 
+Data          : valid
+_Python3      : valid
+Sisi_x        : valid
+01_pertama    : tidak valid (karena menyalahi syarat pembuatan variable nomor 3)
+sisi y        : tidak valid (karena menyalahi syarat pembuatan variable nomor 4)
+
+# Catatan-catatan
+1. Python adalah bahasa pemrograman case sensitive, artinya, huruf kecil dan huruf besar merupakan data yang berbeda meski tulisannya sama.
+2. Ada beberapa kata tertentu yang tidak dapat digunakan dalam pembuatan variable, karena merupakan kata kunci built-in instruksi python.
+Mereka adalah "and, assert, break, class, continue, def, del, elif, else, except, exec, finally, for, from, global, if, import, in, is, lambda,
+not, or, pass, print, raise, return, try, while".
