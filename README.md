@@ -6,9 +6,8 @@ Bab dan subbab yang akan dipelajari diantaranya adalah:
    a. variable
    b. operator
    c. tipe data numerik
-   d. penugasan variable
-   e. string
-   f. input
-   g. komentar
-   h. menulis program dalam file
+   d. string
+   e. input
+   f. komentar
+   g. menulis program dalam file
  
