@@ -335,6 +335,32 @@
       print(hasil)
       12
   
-  
-  
+================================================== 
+
+# G. MENULIS PROGRAM DALAM FILE
+#    Pada bagian ini akan dibahas bagaimana cara menulis program dalam teks editor, kemudian mengkompilasi (compile) file tersebut sehingga
+     dapat dijalankan. Adapun ekstensi file yang akan kita gunakan saat menyimpannya dalam bahasa pemrograman python adalah dot py (.py).
+
+# Contoh-contoh program 
+1. Menulis program penghitung keliling persegi panjang
+
+#Python3
+#Program penghitung keliling persegi panjang.py
+
+p = input('masukkan panjang persegi panjang= ')
+l = input('masukkan lebar persegi panjang= ')
+kelilingpersegipanjang = 2 * (int(p)+int(l)) 
+print("keliling persegi panjang dengan panjang", p, "dan lebar", l, "adalah", kelilingpersegipanjang)
+
+
+2. Menulis program penghitung luas persegi panjang
+
+#Python3
+#Program penghitung keliling persegi panjang.py
+
+p = input('masukkan panjang persegi panjang= ')
+l = input('masukkan lebar persegi panjang= ')
+luaspersegipanjang = int(p)*int(l)
+print("luas persegi panjang dengan lebar", l, "dan panjang", p, "adalah", luaspersegipanjang)
+
  
