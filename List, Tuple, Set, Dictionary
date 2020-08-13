@@ -419,7 +419,17 @@
      perintah ini benar secara sintaks tapi salah secara logika. Yang perlu kita ingat adalah untuk selalu menggunakan kunci dan bukan nilai
      ketika mengakses sebuah elemen pada dictionaries.
       
-          
+# Beberapa fungsi pada Dictionaries
+  a. clear()             : menghapus seluruh elemen dictionaries 
+  b. items()             : menampilkan seluruh elemen dictionaries
+  c. keys()              : menampilkan seluruh kunci dalam dictionaries
+  d. values()            : menampilkan seluruh nilai dalam dictionaries
+  e. pop(kunci)          : menghapus elemen dalam dictionaries dengan kunci tertentu
+  f. update(object)      : menambahkan elemen suatu dictionaries dari dictionaries lainnya
+  g. has_key(kunci)      : mengetahui apakah suatu dictionaries memiliki kunci tertentu
+  h. get(kunci)          : mengembalikan nilai balik berupa nilai dari kunci yang menjadi argumen fungsi get()
+  i. len()               : mengetahui panjang suatu list
+  j. cmp(dict1, dict2)   : membandingkan dictionaries dengan dictionaries lainnya.
           
 
 
