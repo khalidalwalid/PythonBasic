@@ -3,3 +3,4 @@ Disini akan dijelaskan dasar-dasar dari pemrograman Python3, berikut teori dan i
 
 Bab dan subbab yang akan dipelajari diantaranya adalah:
 1. Dasar-dasar Python3 (variable, operator, tipe data numerik, string, input, komentar, menulis program dalam file)
+2. List, Tuple, Set, dan Dictionary
