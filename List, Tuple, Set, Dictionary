@@ -48,13 +48,380 @@
     5
 
 # Memodifikasi List
+1. Mengubah list
+   Cara mengubah data dalam list adalah dengan memberikan penugasan data baru pada elemen/data yang ingin diubah dalam sebuah list.
+   contoh:
+     contohList = ["programmer", 4, 99, 0.5, "python"]
+     contohList[1] = "content creator"
+     print(contohList)
+     ["programmer", "conten creator", 99, 0.5, "python"]
+ 
+2. Menyisipkan elemen/data list
+   Menyisipkan elemen/data pada list artinya kita hanya menambahkan data/elemen pada list tanpa menghapus data yang sudah ada sebelumnya.
+   a. Dasar
+      contoh:
+          contohList = ["programmer", "conten creator", 99, 0.5, "python"]
+          contohList[:0] = 3.14                                                      # menyisipkan data baru pada awal list
+          print(contohList)
+          [3.14, "programmer", "conten creator", 99, 0.5, "python"]
+     
+          contohList[len(list):] = "coder"                                           # menyisipkan data baru pada akhir list
+          print(contohList)
+          [3.14, "programmer", "conten creator", 99, 0.5, "python", "coder"]
+   
+   b. fungsi append(), insert(), dan extend()
+      catatan:
+          jangan lupa mencantumkan argumen pada fungsi-fungsi tersebut. Khusus untuk fungsi insert(), 2 argumen dibutuhkan dengan argumen
+          pertama berupa index elemen yang ingin disisipkan dan argumen kedua berupa elemen/data yang ingin disisipkan.
+      contoh:
+          contohList = ["programmer", "conten creator", 99, 0.5, "python"]
+          contohList.append(14)                                                      # menambahkan elemen list dengan fungsi append()
+          print(contohList)
+          ["programmer", "conten creator", 99, 0.5, "python", 14]
+          
+          contohList = ["programmer", "conten creator", 99, 0.5, "python"]
+          contohList.insert(1, "coder")                                              # menambahkan elemen list dengan fungsi insert()
+          print(contohList)
+          ['programmer', 'coder', 4, 99, 0.5, 'python']
+          
+          contohList = ["programmer", "conten creator", 99, 0.5, "python"]
+          listBaru = [1, 2, 3]
+          contohList.extend(listBaru)                                                # menambahkan elemen list dengan fungsi extend()
+          print(contohList)
+          ["programmer", "conten creator", 99, 0.5, "python", 1, 2, 3]
+ 
+ 3. Menyisipkan list ke dalam list
+    Setelah sebelumnya kita hanya menyisipkan data tunggal ke dalam list, kali ini kita akan menyisipkan list ke dalam list.
+    catatan :
+     Dengan adanya list di dalam list, maka list yang terdapat di dalam list tersebut dihitung sebagai data tunggal sehingga ketika kita 
+     selesai menambahkan sebuah list dalam list, maka panjang list utama hanya bertambah 1 data saja.
+    contoh:
+     contohList = ["programmer", "conten creator", 99, 0.5, "python"]
+     contohList2 = [1, 2, 3]
+     contohList[:0] = contohList2
+     print(contohList)
+     [[1, 2, 3], "programmer", "conten creator", 99, 0.5, "python"]
+     
+     print(len(contohList))                                                     # mengecek panjang list utama setelah ditambahkan list
+     6
+
+4. Menghapus elemen list
+   Terdapat beberapa metode yang dapat digunakan untuk menghapus data/elemen dalam suatu list.
+   a. namaList[index] = []
+      contoh:
+          contohList = ["programmer", "conten creator", 99, 0.5, "python"]
+          contohList[1] = []
+          print(contohList)
+          ["programmer", 99, 0.5, "python"]
+          
+          contohList[1:] = []
+          print(contohList)
+          ["programmer"]
+   
+   b. fungsi del dan remove()
+      catatan:
+          jangan lupa menambahkan argumen pada fungsi remove() berupa nilai yang ingin kita hapus dalam sebuah list.
+      contoh:
+          contohList = ["programmer", "conten creator", 99, 0.5, "python"]
+          del contohList[1:4]                                                   # menghapus list dengan fungsi del                                                              
+          print(contohList)
+          ["programmer", "python"]
+          
+          contohList.remove("python")                                           # menghapus data yang bernilai python dengan fungi remove()
+          print(contohList)
+          ["programmer"]
+          
+5. Mengurutkan dan membalik list
+   a. fungsi sort() dan sorted() untuk mengurutkan list
+      contoh:
+          listBaru1 = [2, 5, 3, 1, 4]
+          listBaru1.sort()                                                      # mengurutkan list dengan fungsi sort()
+          print(listBaru1)
+          [1, 2, 3, 4, 5]
+          
+          listBaru2 = ["e", "c", "b", "d", "a"]
+          print(listBaru2.sort())
+          ["a", "b", "c", "d", "e"]
+   
+          listBaru1 = [2, 5, 3, 1, 4]
+          sorted(listBaru1)                                                     # mengurutkan list dengan fungsi sorted()
+          [1, 2, 3, 4, 5]
+          
+  b. fungsi reverse() untuk membalik list
+     contoh:
+          listBaru = [1, 2, 3, 4, 5]
+          listBaru.reverse()
+          print(listBaru)
+          [5, 4, 3, 2, 1]
+
+6. Penggunaan operator pada list
+   Operator yang biasa digunakan pada list adalah operator penjumlahan (+) dan perkalian (*) dan in.
+   catatan:
+     operator in digunakan untuk mencari tahu apakah terdapat data/nilai tertentu dalam keanggotaan sebuah list dengan nilai balik True jika
+     terdapat data/nilai yang dicari dan False jika tidak ada.
+   contoh:
+   listBaru1 = [1, 2, 3, 4, 5]
+   listBaru2 = ["a", "b", "c", "d", "e"]
+   listBaru1 = listBaru1 + listBaru2                                            # penggunaan operator penjumlahan (+) pada list
+   print(listBaru1)
+   [1, 2, 3, 4, 5, "a", "b", "c", "d", "e"]
+   
+   listBaru1 = [1, 2, 3, 4, 5]
+   listBaru1 * 3                                                                # penggunaan operator perkalian (*) pada list
+   print(listBaru1)
+   [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+
+   listBaru1 = [1, 2, 3, 4, 5]
+   3 in listBaru
+   True
+   6 in listBaru
+   False
+   
+# List Bersarang / List 2 Dimensi
+  Disebut list bersarang atau list dua dimensi karena list ini terdiri dari kolom dan baris. Sehingga cara mengaksesnya adalah dengan memberi
+  perintah namaList[[indexBaris][indexKolom]].
+  contoh:
+     listBersarang = [[1, 2, 3, 4, 5], ["a", "b", "c", "d", "e"]]               # list bersarang
+     print(listBersarang[0][3])                                                 # cara mengakses list bersarang
+     4
+     print(listBersarang[1][0])
+     a
+     
+     listBersarang[0][0] = 10                                                   # mengubah elemen/data dalam list bersarang
+     print(listBersarang)
+     [[10, 2, 3, 4, 5], ['a', 'b', 'c', 'd', 'e']]
+     
+     listBersarang[0] = []
+     print(listBersarang)
+     [[], ['a', 'b', 'c', 'd', 'e']]
+
+
+# B. TUPLE
+#    Tuple adalah jenis data yang mirip dengan list. Akan tetapi, ada beberapa perbedaan signifikan antara list dan tuple. Beberapa perbedaan
+     list dan tuple adalah sebagai berikut:
+     1. List ditandaoi dengan tanda kurung siku ([]), sedangkan tuple ditandai dengan tanda kurung biasa (()).
+     2. Tuple tidak dapat dirubah (dihapus atau diganti) datanya dan hanya dapat ditambahkan saja.
+
+# Konversi tuple ke list dan sebaliknya
+  Dengan keterbatasan tuple, jika kita ingin merubah data yang ada di dalam sebuah tuple, kita dapat menggunakan fungsi list(). Begitu pula 
+  sebaliknya, jika ingin mengkonversi list menjadi tuple, kita dapat menggunakan fungsi tuple()
+  catatan:
+     jangan lupa melampirkan argumen berupa tuple yang ingin dikonversi menjadi list dalam fungsi list() atau argumen berupa list yang ingin
+     dikonversi menjadi tuple!
+  contoh:
+     contohTuple = (1, 2, 3, 4, 5)
+     contohTuple = list(contohTuple)                                             # merubah tuple menjadi list
+     contohTuple.insert(3, "sekarang data sudah ditambahkan")                    # menambahkan data baru pada tuple yang sudah menjadi list
+     contohTuple = tuple(contohTuple)                                            # merubah list menjadi tuple
+     print(contohTuple)
+     (1, 2, 3, 'sekarang data sudah ditambahkan', 4, 5)
+     
+
+# C. SET (HIMPUNAN)
+#    Objek set pada python merupakan penerapan set pada matematika sehingga dapat dilakukan operasi keanggotaan gabungan (union), dan lain-lain.
+     Terdapat 2 jenis set yaitu set dinamis (mutable set) dan set statis (immutable set). Set dinamis merupakan set yang dapat diubah ukurannya
+     dan ditandai dengan kata set. Sedangkan set statis adalah set yang isinya tidak bisa diubah dan ditandai dengan kata frozenset. Jadi, selain
+     melakukan pembaruan (mengubah, menambah, mengurangi), operasi lainnya dapat dilakukan pada set statis.
+     
+# Cara Membuat Set
+  x = set("pemrograman")
+  print(x)
+  {'a', 'p', 'g', 'n', 'm', 'e', 'r', 'o'}
+  print(type(x))                                                                # mengecek tipe data set
+  <class 'set'>
+
+  y = frozenset("pemrograman")
+  print(y)
+  frozenset({'a', 'p', 'g', 'n', 'm', 'e', 'r', 'o'})
+  print(type(y))                                                                # mengecek tipe set
+  <class 'frozenset'>
+
+# Operasi pada Set
+1. Menambah elemen set dengan fungsi add() dan update().
+   a. fungsi add()
+      contoh:
+          x = set("pemrograman")
+          x.add("python")
+          print(x)
+          {'a', 'p', 'python', 'g', 'n', 'm', 'e', 'r', 'o'}
+    
+    b. fungsi update()
+       contoh:
+          x = set("pemrograman")
+          x.update("python")
+          print(x)
+          {'a', 'y', 'p', 'g', 'n', 'm', 'e', 'h', 'r', 'o', 't'}
+
+2. Menghapus set dan elemen set dengan fungsi del dan remove.
+   a. fungsi remove()
+      fungsi remove digunakan untuk menghapus elemen dalam sebuah set.
+      contoh:
+          x = set("pemrograman")
+          print(x)
+          {'a', 'p', 'g', 'n', 'm', 'e', 'r', 'o'}
+          x.remove("a")                                                         # menghapus elemen a pada set dengan fungsi remove()
+          print(x)
+          {'p', 'g', 'n', 'm', 'e', 'r', 'o'}
+    
+    b. fungsi del
+       fungsi del digunakan untuk menghapus set.
+       contoh:
+          x = set("pemrograman")
+          del x
+          print(x)
+          Traceback (most recent call last):                                    # tidak terdapat set karena sudah dihapus sebelumnya
+               File "<pyshell#78>", line 1, in <module>
+                    print(x)
+          NameError: name 'x' is not defined
+    
+    c. operasi keanggotaan dengan operator in dan not in
+       operator ini digunakan untuk mengetahui apakah data tertentu merupakan elemen sebuah set. Nilai balik kedua operator ini berupa 
+       True dan False yang menyatakan bahwa suatu nilai/data merupakan elemen set atau tidak.
+       contoh:
+          x = set("pemrograman")
+          "a" in x
+          True
+          "c" in x
+          False
+          
+          "c" not in x
+          True
+          "a" not in x
+          False
+    
+    d. operasi gabungan dan irisan dengan operator | dan &
+       gabungan merupakan operasi penggabungan dua buah set atau lebih. Sedangkan irisan merupakan operasi untuk menampilkan elemen-elemen
+       yang sama dari dua atau lebih set/himpunan.
+       contoh:
+          x = set("pemrograman")
+          y = set("python")
+          x | y                                                                 # operasi penggabungan set
+          {'a', 'y', 'p', 'g', 'n', 'm', 'e', 'h', 'r', 'o', 't'}
+          x & y                                                                 # operasi irisan set
+          {'p', 'n', 'o'}
+              
+   e. operasi perbandingan
+      operasi perbandingan merupakan operasi untuk membandingkan sebuah set dengan set lainnya. Operator yang biasa digunakan untuk melakukan
+      operasi perbandingan adalah ==, !=, <, >, <=, =>. Operasi ini akan bernilai balik True jika perbandingan yang diajukan benar dan False jika
+      perbandingan yang diajukan salah.
+      catatan:
+          Dikatakan x superset y jika semua elemen y termasuk dalam x dan dikatakan x subset y jika semua elemen x menjadi elemen y.
+      contoh:
+          x = set("pemrograman")
+          y = set("pero")
+          x > y                                                                 # apakah x merupakan superset dari y
+          True
+          x < y                                                                 # apakah x merupakan subset dari y
+          False
+          
+   f. operasi komplemen
+      komplemen berarti elemen-elemen yang hanya terdapat pada satu himpunan saja dan tidak terdapat pada himpunan lain. Operasi komplemen 
+      dintadai dengan tanda minus (-).
+      contoh:
+          x = set("pemrograman")
+          y = set("python")
+          x - y                                                                 # x komplenen y
+          {'a', 'g', 'm', 'e', 'r'}
+          y - x                                                                 # y komplemen x
+          {'y', 'h', 't'}
+          
+   g. operasi beda setangkup
+      operasi ini merupakan operasi XOR pada sebuah set dimana akan menghasilkan semua elemen pembeda dari dua buah set atau lebih.
+      contoh:
+          x = set("pemrograman")
+          y = set("python")
+          x ^ y                                                                 # operasi beda setangkup (XOR) pada set
+          {'a', 'y', 'g', 'm', 'e', 'h', 'r', 't'}
+
+# Fungsi-fungsi built-in set
+  Selain menggunakan operator-operator di atas, kita juga dapat menggunakan fungsi built-in yang dimiliki set pada python untuk melakukan
+  operasi-operasi tersebut. Beberapa fungsi built-in tersebut adalah:
+     a. issubset()                 : fungsi subset
+     b. issuperset()               : fungsi superset
+     c. union()                    : fungsi gabungan
+     d. intersection()             : fungsi irisan
+     e. difference()               : fungsi komplemen
+     f. symmetric_difference()     : fungsi beda setangkup
   
+
+# D. DICTIONARIES
+#    Dictionaries merupakan sekumpulan data yang terdiri dari sepasang kunci dan nilai. Sebagaimana list dan tuple yang memiliki tanda sendiri, 
+     dictionaries juga memiliki tanda sendiri yaitu kurung kurawal ({}). Format penulisan dictionaries adalah sebagai berikut:
+     namaDictionaries = {kunci : nilai}
+
+# Pembuatan Dictionaries
+  contohDict = {"satu":1, "dua":2, "tiga":3, "empat":4, "lima":5}
+  print(contohDict)
+  {'satu': 1, 'dua': 2, 'tiga': 3, 'empat': 4, 'lima': 5}
+
+# Mengakses nilai dalam dictionaries
+  Mengakses nilai dalam dictionaries dapat dilakukan sama seperti mengakses elemen pada list dan tuple yaitu dengan format namaDict[index].
+  Akan tetapi, pada dictionaries, index tersebut diganti dengan kunci dari nilai yang ingin diakses sehingga menjadi namaDict[kunci].
+  contoh:
+     contohDict = {"satu":1, "dua":2, "tiga":3, "empat":4, "lima":5}
+     contohDict["satu"]
+     1
+     contohDict[1]
+     Traceback (most recent call last):                                                 # error karena bukan kunci yang dilewatkan sebagai argumen
+        File "<pyshell#97>", line 1, in <module>
+          contohDict[3]
+     KeyError: 3
+
+# Operasi pada Dictionaries
+1. Menambah dan mengubah elemen dictionaries
+   a. namaDict[kunciBaru] = nilaiBaru untuk menambahkan elemen baru pada dictionaries
+      contoh:
+          contohDict = {"satu":1, "dua":2, "tiga":3, "empat":4, "lima":5}
+          contohDict["enam"] = 6
+          print(contohDict)
+          {'satu': 1, 'dua': 2, 'tiga': 3, 'empat': 4, 'lima': 5, 'enam': 6}
+          
+   b.namaDict[kunci] = nilai untuk mengubah elemen yang sudah ada pada dictionaries
+     contoh:
+          contohDict = {"satu":1, "dua":2, "tiga":3, "empat":4, "lima":5}
+          contohDict["satu"] = "satu"
+          print(contohDict)
+          {'satu': 'satu', 'dua': 2, 'tiga': 3, 'empat': 4, 'lima': 5}
+          
+ 2. Menghapus elemen dictionaries dengan fungsi del dan pop() serta clear()
+    a. fungsi del
+       contoh:
+          contohDict = {"satu":1, "dua":2, "tiga":3, "empat":4, "lima":5}
+          del contohDict["lima"]
+          print(contohDict)
+          {"satu":1, "dua":2, "tiga":3, "empat":4}
+      
+    b. fungsi pop()
+       contoh:
+          contohDict = {"satu":1, "dua":2, "tiga":3, "empat":4, "lima":5}
+          contohDict.pop("lima")
+          5
+          print(contohDict)
+          {'satu': 1, 'dua': 2, 'tiga': 3, 'empat': 4}
+          
+     c. fungsi clear()
+        fungsi ini digunakan jika anda ingin menghapus seluruh elemen dictionaries.
+        contoh:
+          contohDict = {"satu":1, "dua":2, "tiga":3, "empat":4, "lima":5}
+          contohDict.clear()
+          print(contohDict)
+          {}
   
-  
-  
-  
-  
-  
-  
-  
-  
+ 3. Operasi keanggotaan (in dan not in)
+    contoh:
+     contohDict = {"satu":1, "dua":2, "tiga":3, "empat":4, "lima":5}
+     "satu" in contohDict
+     True
+     
+     1 in contohDict
+     False
+    catatan:
+     perintah ini benar secara sintaks tapi salah secara logika. Yang perlu kita ingat adalah untuk selalu menggunakan kunci dan bukan nilai
+     ketika mengakses sebuah elemen pada dictionaries.
+      
+          
+          
+
+
+
+
