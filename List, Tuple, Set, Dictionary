@@ -1,0 +1,60 @@
+# A. LIST
+     List merupakan sejumlah atau sekumpulan data yang terdapat dalam sebuah variable. List ditandai dengan tanda kurung siku ([]). 
+
+# Membuat List
+  Cara membuat list dimulai dengan pembuatan variable yang akan menampung list terlebih dahulu, kemudian diikuti dengan tanda sama dengan (=),
+  setelah itu membuat tanda kurung siku ([]) dan masukkan sejumlah data yang ingin disimpan sebagai list ke dalam tanda kurung siku tersebut.
+  contoh:
+    contohList = ["programmer", 4, 99, 0.5, "python"]
+    print(contohList)
+    ["programmer", 4, 99, 0.5, "python"]
+
+# Mengakses elemen list
+  Data yang terdapat dalam list di index dari 0 hingga n-1 (n adalah banyak data dalam list) sehingga data-data yang terdapat dalam list dapat 
+  kita akses melalui pengindeksan.
+  contoh:
+    contohList = ["programmer", 4, 99, 0.5, "python"]
+    print(contohList[0])
+    programmer
+    
+    print(contohList[:2])
+    programmer, 4
+    
+    print(contohList[4:])
+    python
+    
+    print(contohList[3:5])
+    0.5, python
+    
+    print(contohList[-3])
+    99
+    
+    print(contohList[-3:])
+    99, 0.5, python
+    
+# Perbedaan List dengan Array
+  List di python mungkin mirip dengan array pada C/C++ dan Java. Sebenarnya, terdapat perbedaan antara list dan array yang terletak pada jenis
+  data yang dapat ditampungnya. sebuah array hanya dapat menyimpan data yang sejenis saja, sementara sebuah list pada python dapat menyimpan 
+  data yang beragam jenis sebagaimana tercantum pada contoh di atas.
+    
+# Fungsi len()
+  Untuk mengetahui berapa panjang sebuah list atau dengan kata lain mengetahui berapa banyak data yang tersimpan dalam sebuah list, maka kita
+  dapat menggunakan fungsi len() yang merupakan fungsi built-in python.
+  catatan:
+    Ingat! sebuah data dan data lainnya dalam list dipisahkan dengan tanda koma (,).
+  contoh:
+    contohList = ["programmer", 4, 99, 0.5, "python"]
+    print(len(contohList))
+    5
+
+# Memodifikasi List
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
